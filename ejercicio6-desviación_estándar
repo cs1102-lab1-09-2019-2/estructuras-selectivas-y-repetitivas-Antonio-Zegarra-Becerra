@@ -1,0 +1,23 @@
+#include <cmath>
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    double N,i=0,sum=0,sumcuad=0,num=0,primerap=0,segpart=0;
+    cout<<" N : ";
+    cin>>N;
+    while(i<N){
+        cout<<"x"<<i+1<<" : ";
+        cin>>num;
+        sum=sum+num;
+        sumcuad=sumcuad+num*num;
+        i++;
+    }
+    primerap=(1/N)*sumcuad;
+    segpart=(1/N)*sum;
+    
+    cout<<"sd: "<<fixed<<setprecision(2)<<sqrt(primerap-pow(segpart,2));
+    return 0;
+}
