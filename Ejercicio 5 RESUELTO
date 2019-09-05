@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+using namespace std;
+char clase;
+int numAseg;
+int pagMes;
+
+int main() {
+	do {
+		cout << "Tipo seguro: ";
+		cin >> clase;
+	} while ( clase != 'A' && clase != 'B' && clase != 'C' && clase != 'D');
+	switch (clase) {
+	case 'A':
+		pagMes = 40;
+		do {
+			cout << "Cantidad de asegurados: ";
+			cin >> numAseg;
+		} while (numAseg < 0);
+		if (numAseg > 8){
+			pagMes = pagMes + ((numAseg - 8) * 7.00);
+		}
+		break;
+	case 'B':
+		pagMes = 30;
+		do {
+			cout << "Cantidad de asegurados: ";
+			cin >> numAseg;
+		} while (numAseg < 0);
+		if (numAseg > 6) {
+			pagMes = pagMes + ((numAseg - 6) * 7.00);
+		}
+		break;
+	case 'C':
+		pagMes = 20;
+		do {
+			cout << "Cantidad de asegurados: ";
+			cin >> numAseg;
+		} while (numAseg < 0);
+		if (numAseg > 4) {
+			pagMes = pagMes + ((numAseg - 4) * 3.00);
+		}
+		break;
+	case 'D':
+		pagMes = 10;
+		do {
+			cout << "Cantidad de asegurados: ";
+			cin >> numAseg;		
+		} while (numAseg < 0);
+		if (numAseg > 2) {
+			pagMes = pagMes + ((numAseg - 2) * 3.00);
+		}
+		break;
+	}
+	cout << "Su monto mensual a pagar es: " << pagMes << endl;
+}
