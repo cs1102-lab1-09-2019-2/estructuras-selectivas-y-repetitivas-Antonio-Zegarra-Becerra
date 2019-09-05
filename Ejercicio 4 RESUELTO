@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int opr;
+    float pr;
+    char clr;
+    do{
+        cout<<"Tipo de entrada\n";
+        cout<<"1.Super Vip     precio 212\n";
+        cout<<"2.Vip           precio 170\n";
+        cout<<"3.Preferencial  precio 136\n";
+        cout<<"4.General       precio 59\n";
+        cout<<"Selecione tipo de entrada: ";
+        cin>>opr;
+    }while(opr > 4);
+    if(opr == 1)
+        pr = 212;
+    else if(opr == 2)
+        pr = 170;
+    else if (opr == 3)
+        pr = 136;
+    else if (opr == 4)
+        pr = 59;
+    do{
+        cout<<"Es cliente de Claro <S,s,N,n> : ";
+        cin>>clr;
+    }while(clr !='S' && clr !='s' && clr !='N' && clr !='n');
+
+    if (clr == 'S'|| clr =='s')
+        pr = pr * 80 / 100;
+
+    cout<<"Monto a pagar "<<pr;
+
+}
