@@ -1,10 +1,10 @@
 # Ejercicios de estructura de control 2
 ## Selectivas y Repetitivas
 
-Nombre:
+Nombre: Antonio Manuel Zegarra Becerra
 --
 
-Github Username:
+Github Username: Antonio-Zegarra-Becerra
 --
 
 Instrucciones:
